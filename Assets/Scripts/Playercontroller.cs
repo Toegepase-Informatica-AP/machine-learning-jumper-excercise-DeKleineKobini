@@ -8,12 +8,18 @@ public class Playercontroller : Agent
 {
     public float jumpHeight = 5;
     private Rigidbody body;
+    bool isGrounded = false;
 
 
     public override void Initialize()
     {
         base.Initialize();
         body = GetComponent<Rigidbody>();
+        body.freezeRotation = true;
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        isGrounded = true;
     }
 
     public override void OnEpisodeBegin()
@@ -28,18 +34,19 @@ public class Playercontroller : Agent
     {
         actionsOut[0] = 0f;
         if (Input.GetKey(KeyCode.Space))
-        {
-            Debug.Log("Space pressed");
+        {            
             actionsOut[0] = 1f;
         }
+
     }
 
     public override void OnActionReceived(float[] vectorAction)
     {
-        if (vectorAction[0] != 0)
+        if (vectorAction[0] != 0 && isGrounded)
         {
-            Vector3 translation = transform.up * jumpHeight * Time.deltaTime;
-            transform.Translate(translation, Space.World);
+
+            body.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
+            isGrounded = false;
         }
     }
 }
