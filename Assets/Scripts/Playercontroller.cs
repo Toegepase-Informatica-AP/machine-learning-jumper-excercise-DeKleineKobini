@@ -27,9 +27,9 @@ public class Playercontroller : Agent
     public override void Heuristic(float[] actionsOut)
     {
         actionsOut[0] = 0f;
-
         if (Input.GetKey(KeyCode.Space))
         {
+            Debug.Log("Space pressed");
             actionsOut[0] = 1f;
         }
     }
