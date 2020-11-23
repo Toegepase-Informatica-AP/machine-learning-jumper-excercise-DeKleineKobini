@@ -9,7 +9,9 @@ public class Playercontroller : Agent
     public float jumpHeight = 5;
     private Rigidbody body;
     bool isGrounded = false;
-
+    internal int lifes = 5;
+    public int defaultLives = 5;
+    internal int blocksJumpedOver = 0;
 
     public override void Initialize()
     {
@@ -28,6 +30,11 @@ public class Playercontroller : Agent
         transform.localRotation = Quaternion.Euler(0, 0, 0);
         body.angularVelocity = Vector3.zero;
         body.velocity = Vector3.zero;
+        Enemy.speed = Random.Range(3f, 5f);
+        GetComponentInParent<Environment>().ResetEnvironment();
+        lifes = defaultLives;
+        blocksJumpedOver = 0;
+        Debug.Log("Enemy speed" + Enemy.speed);
     }
 
     public override void Heuristic(float[] actionsOut)
@@ -44,9 +51,9 @@ public class Playercontroller : Agent
     {
         if (vectorAction[0] != 0 && isGrounded)
         {
-            AddReward(-0.001f);
-            body.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
             isGrounded = false;
+            AddReward(-0.1f);
+            body.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
         }
     }
 }
