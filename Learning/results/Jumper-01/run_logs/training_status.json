@@ -2,46 +2,28 @@
     "My Behavior": {
         "checkpoints": [
             {
-                "steps": 500381,
-                "file_path": "results\\Jumper-01\\My Behavior\\My Behavior-500381.nn",
-                "reward": null,
-                "creation_time": 1606131644.6922963
+                "steps": 499991,
+                "file_path": "results\\Jumper-01\\My Behavior\\My Behavior-499991.nn",
+                "reward": -5.1512821316719055,
+                "creation_time": 1606142083.9590113
             },
             {
-                "steps": 500381,
-                "file_path": "results\\Jumper-01\\My Behavior\\My Behavior-500381.nn",
-                "reward": null,
-                "creation_time": 1606131724.9838073
-            },
-            {
-                "steps": 500381,
-                "file_path": "results\\Jumper-01\\My Behavior\\My Behavior-500381.nn",
-                "reward": null,
-                "creation_time": 1606132989.387723
-            },
-            {
-                "steps": 500381,
-                "file_path": "results\\Jumper-01\\My Behavior\\My Behavior-500381.nn",
-                "reward": null,
-                "creation_time": 1606133130.1306145
-            },
-            {
-                "steps": 500381,
-                "file_path": "results\\Jumper-01\\My Behavior\\My Behavior-500381.nn",
-                "reward": null,
-                "creation_time": 1606133190.9684315
+                "steps": 500600,
+                "file_path": "results\\Jumper-01\\My Behavior\\My Behavior-500600.nn",
+                "reward": -5.124390321533855,
+                "creation_time": 1606142085.787831
             }
         ],
         "final_checkpoint": {
-            "steps": 500381,
+            "steps": 500600,
             "file_path": "results\\Jumper-01\\My Behavior.nn",
-            "reward": null,
-            "creation_time": 1606131724.9838073
+            "reward": -5.124390321533855,
+            "creation_time": 1606142085.787831
         }
     },
     "metadata": {
         "stats_format_version": "0.1.0",
-        "mlagents_version": "0.21.1",
+        "mlagents_version": "0.21.0",
         "tensorflow_version": "2.3.1"
     }
 }

@@ -1,6 +1,6 @@
 default_settings: null
 behaviors:
-  Obelix:
+  Jumper:
     trainer_type: ppo
     hyperparameters:
       batch_size: 32
@@ -16,9 +16,7 @@ behaviors:
       hidden_units: 128
       num_layers: 2
       vis_encode_type: simple
-      memory:
-        sequence_length: 32
-        memory_size: 256
+      memory: null
     reward_signals:
       extrinsic:
         gamma: 0.99
@@ -57,7 +55,7 @@ checkpoint_settings:
   run_id: Jumper-01
   initialize_from: null
   load_model: false
-  resume: true
+  resume: false
   force: false
   train_model: false
   inference: false

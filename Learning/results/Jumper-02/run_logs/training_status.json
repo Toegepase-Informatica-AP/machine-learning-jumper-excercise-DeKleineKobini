@@ -2,28 +2,28 @@
     "My Behavior": {
         "checkpoints": [
             {
-                "steps": 67998,
-                "file_path": "results\\Jumper-02\\My Behavior\\My Behavior-67998.nn",
-                "reward": -7.276000177264214,
-                "creation_time": 1606134955.3355577
+                "steps": 499944,
+                "file_path": "results\\Jumper-02\\My Behavior\\My Behavior-499944.nn",
+                "reward": -5.072222309807937,
+                "creation_time": 1606143765.9986377
             },
             {
-                "steps": 355576,
-                "file_path": "results\\Jumper-02\\My Behavior\\My Behavior-355576.nn",
-                "reward": -5.83478273872448,
-                "creation_time": 1606135641.398291
+                "steps": 500250,
+                "file_path": "results\\Jumper-02\\My Behavior\\My Behavior-500250.nn",
+                "reward": -5.052631662864434,
+                "creation_time": 1606143767.9023163
             }
         ],
         "final_checkpoint": {
-            "steps": 355576,
+            "steps": 500250,
             "file_path": "results\\Jumper-02\\My Behavior.nn",
-            "reward": -5.83478273872448,
-            "creation_time": 1606135641.398291
+            "reward": -5.052631662864434,
+            "creation_time": 1606143767.9023163
         }
     },
     "metadata": {
         "stats_format_version": "0.1.0",
-        "mlagents_version": "0.21.1",
+        "mlagents_version": "0.21.0",
         "tensorflow_version": "2.3.1"
     }
 }

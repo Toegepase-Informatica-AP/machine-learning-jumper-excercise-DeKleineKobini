@@ -1,2 +1,3 @@
-model_checkpoint_path: "My Behavior-355576.ckpt"
-all_model_checkpoint_paths: "My Behavior-355576.ckpt"
+model_checkpoint_path: "My Behavior-500250.ckpt"
+all_model_checkpoint_paths: "My Behavior-499944.ckpt"
+all_model_checkpoint_paths: "My Behavior-500250.ckpt"
