@@ -44,7 +44,7 @@ public class Playercontroller : Agent
     {
         if (vectorAction[0] != 0 && isGrounded)
         {
-
+            AddReward(-0.001f);
             body.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
             isGrounded = false;
         }
