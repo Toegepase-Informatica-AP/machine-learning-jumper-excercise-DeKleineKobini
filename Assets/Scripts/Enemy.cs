@@ -5,8 +5,13 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public static float speed = 1f;
+    public float lifeTime = 5f;
+
+    internal Vector3 movedirection = Vector3.back;
+
     private Playercontroller player;
-    public Vector3 movedirection = Vector3.back;
+    private float timer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,27 +21,23 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (timer < lifeTime) timer += Time.deltaTime;
+        else RegisterJumped();
+
         transform.position += movedirection * speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "KillGate")
+        if (other.CompareTag("KillGate"))
         {
-            Destroy(this.gameObject);
-
-            player.AddReward(0.5f);
-            player.blocksJumpedOver++;
-            if (player.blocksJumpedOver >= 100)
-            {
-                player.EndEpisode();
-            }
-        }
+            RegisterJumped();
+        } 
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(this.gameObject);
             player.AddReward(-1);
@@ -45,6 +46,18 @@ public class Enemy : MonoBehaviour
             {
                 player.EndEpisode();
             }
+        }
+    }
+
+    private void RegisterJumped()
+    {
+        Destroy(this.gameObject);
+
+        player.AddReward(0.5f);
+        player.blocksJumpedOver++;
+        if (player.blocksJumpedOver >= 100)
+        {
+            player.EndEpisode();
         }
     }
 }
