@@ -34,7 +34,6 @@ public class Playercontroller : Agent
         GetComponentInParent<Environment>().ResetEnvironment();
         lifes = defaultLives;
         blocksJumpedOver = 0;
-        Debug.Log("Enemy speed" + Enemy.speed);
     }
 
     public override void Heuristic(float[] actionsOut)
