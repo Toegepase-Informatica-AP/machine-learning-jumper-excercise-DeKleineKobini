@@ -316,3 +316,5 @@ tensorboard --logdir results
 ## Training resultaten
 
 ![Samenvatting trainingen](resources/resultaten.png)
+
+
