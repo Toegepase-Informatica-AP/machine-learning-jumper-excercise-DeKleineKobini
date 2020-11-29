@@ -12,15 +12,15 @@ Matthias Verschorren, Kobe de Peuter
 
 ## Inhoudstafel
 
-1. [Intro](##-Intro)
-2. [Het spel](##-Het-spel)
-3. [Acties en beloningen](##-Acties-en-beloningen)
-4. [Setup deel 1: Packages](##-setup-deel-1:-packages)
-5. [Setup deel 2: Scripts](##-setup-deel-2:-scripts)
-6. [Setup deel 3: Scene](##-setup-deel-3:-scene)
-7. [Training](##-Training)
-8. [De training starten](##-de-training-starten)
-9. [Training resultaten](##-training-resultaten)
+1. [Intro](#intro)
+2. [Het spel](#het-spel)
+3. [Acties en beloningen](#acties-en-beloningen)
+4. [Setup deel 1: Packages](#setup-deel-1-packages)
+5. [Setup deel 2: Scripts](#setup-deel-2-scripts)
+6. [Setup deel 3: Scene](#setup-deel-3-scene)
+7. [Training](#training)
+8. [De training starten](#de-training-starten)
+9. [Training resultaten](#training-resultaten)
 
 
 ## Intro
