@@ -317,4 +317,6 @@ tensorboard --logdir results
 
 ![Samenvatting trainingen](resources/resultaten.png)
 
+Zoals te zien is er enorm verschil in de snelheid van het trainen. We hebben er zelf niet echt een verklaring voor, omdat de enige wijziging was het oplossen van een kleine bug.
 
+Het oplossen van de bug zou wel een verklaring zijn voor het verschil in score. Deze bug zorge ervoor dat niet elk blokje gedetecteerd werd en er dus punten niet werden toegewezen.
